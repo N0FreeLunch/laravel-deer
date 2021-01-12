@@ -15,8 +15,12 @@ use App\Models\Greeting;
 |
 */
 
-Route::get('/', function () {
-    return "Hello, World";
+Route::get('/static_call', function () {
+    return 'static_call';
+});
+
+$router->get('/none_static_call', function () {
+    return 'none_static_call';
 });
 
 
@@ -26,4 +30,16 @@ Route::get("create-greeting", function () {
   $greeting = new Greeting();
   $greeting->body = "Hello, world";
   $greeting->save();
+});
+
+Route::get('about', function () {
+  return view('about');
+});
+
+Route::get('about', function () {
+  return view('products');
+});
+
+Route::get('services', function () {
+    return view('services');
 });
