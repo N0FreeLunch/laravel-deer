@@ -19,4 +19,13 @@ make laravel project
 --------------------
 ```
 laravel new projectname
+composer install
+npm install
+```
+
+
+Run server
+----------
+```
+php artisan serve
 ```
